@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
+* {
+    /* this is a global reset. */
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #0c3455;
+
+}
+
+span {
+    background: transparent;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    background: #0088a9;
+    font-size: x-large;
+    color: rgb(222, 222, 222);
+    align-items: center;
+    justify-content: center;
+  }
+
+.skillsSection .Information a {
+    padding-bottom: 1px;
+}
+
+li, a, button {
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+
+.logo {
+    width: 70px;
+    cursor: pointer;
+    transition: .3s ease 0s;
+    background: transparent;
+    padding-bottom: 10px;
+}
+
+.logo:hover {
+    filter: invert(1);
+    background: transparent;
+    /* Must specify that the background to be transparent. */
+}
+
+.Navbar {
+    list-style: none;
+
+}
+
+.Navbar li {
+    display: inline-block;
+    /* inline block makes it go left to right */
+    padding: 0px 20px;
+}
+
+.Navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.Navbar li a:hover {
+    color: #0088a9
+}
+
+button-header {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: auto;
+
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-size: x-large;
+    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+    margin: 0 auto;
+    display: block;
+    /* Button is a clickable element, therefore it should have a pointer cursor */
+    cursor: pointer;
+    padding-top: 5px;
+ 
+  }
+
+button-header:hover, button-header:focus::after {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.text {
+background: #0088a9;
+min-height: 10px;
+width: 100%;
+padding-bottom: 2px;
+
+}
+
+.Titles {
+    font-weight: bolder;
+    font-size: 3rem;
+    background: transparent;
+    
+}
+
+.Information {
+    color:#d5d5d5;
+    font-size: 1.5rem;
+    margin-left: 15px;
+    padding-bottom: 30px;
+    background: transparent;
+}
+
+
+.icons {
+    width: 100%;
+    background: transparent;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    
+}
+
+ .container {
+
+    padding-bottom: 200px;
+    background:#0088a9;
+}
+
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #0088a9;
+}
+
+.Description {
+    display: block;
+    background: #0088a9;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 2px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.appCards {
+    margin: 10px;
+    width: 300px;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer; 
+    background:#0c3455;
+    margin-top: 10vh;
+    border: 1px solid #bacdd8;
+    border-radius: 20px;
+    transition:  ease-out 2s;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+}
+
+.details {
+    background: transparent;
+    padding: 16px 8px 8px 8px;
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+.details p 
+{
+    background: transparent;
+}
+
+
+ .appCards:hover {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+} 
+
+.appCards:active, .appCards:focus {
+    filter: brightness(20%);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.appCards:focus {
+    filter: brightness(10%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+@keyframes wiggle {
+    
+    0% { transform: rotate(0deg); }
+   55% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+ @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  
+
+ .app-previews {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width:100%;
+    background: rgba(0,0,0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items:center;
+    
+    
+    
+    
+    
+}
+
+.app-previews .previews{
+    width: auto;
+    display: none;
+    padding: 20px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    height: auto;
+ 
+}
+
+.app-previews .previews.active{
+display: inline-block;
+
+ 
+}
+
+.app-previews .previews .apps{
+    width: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 2px;
+    flex-wrap:wrap;
+    /* need to work this out */
+    
+}
+.app-previews .previews .appGrouping{
+text-align: center;
+color: #ffffff68;
+
+}
+
+.app-previews .previews .appGrouping img{
+    width: 300px;   
+    height: 400px;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    margin:10px;
+    border: .5px solid #dadada;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #9ecaed;
+        -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+
+}
+.app-previews .previews h3{
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin-left: -20px;
+  margin-right: -20px;
+  color: #bacdd8;
+}
+
+.app-previews .previews .fa-xmark{
+    position: absolute;
+    top: 8rem;
+    right: 4rem;
+    cursor: pointer;
+    background: transparent;
+    color:rgb(184, 184, 184);
+    transition: .35s ease-in;
+    font-size: 2rem;
+ }
+.app-previews .previews .fa-xmark:hover{
+    color:rgb(69, 0, 73);
+    transform: rotate(90deg)
+
+ }
