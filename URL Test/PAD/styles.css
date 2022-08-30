@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
+* {
+    /* this is a global reset. */
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #035E7B;
+
+}
+
+.Tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    flex-wrap: wrap;
+    color: #002E2C;
+    font-size: 1.5rem;
+}
+
+
+
+.logo {
+    background: transparent;
+    width:20%;
+    cursor: pointer;
+}
+
+
+
+.Navigation {
+    list-style: none;
+    color: #A2A77F;
+
+}
+
+.Navigation li {
+    display: inline-block;
+    
+}
+
+.Navigation li a {
+    color: #A2A77F;
+}
+
+.Navigation li a:hover{
+    color: #002E2C;
+}
+
+
+
+
+.Titles {
+    color: #A2A77F;
+    font-size: 3rem;
+}
+
