@@ -66,11 +66,11 @@
                 </p>
                 <p class="Information">
                     <ul class="Information">
-                        <li><a href="#">Martial Arts</a></li>
+                        <li><a href="#section2">Martial Arts</a></li>
                         <li><a href="#">Guitar</a></li>
-                        <li><a href="#">Gaming</a></li>
+                        <li><a href="#section3">Gaming</a></li>
                         <li><a href="#">Japanese</a></li>
-                        <li><a href="#">Photo/Video Editing</a></li>
+                        <li><a href="#section1">Photo/Video Editing</a></li>
     
                     </ul>
                 </p>
@@ -79,7 +79,7 @@
         <!-- Cards with pictures and a description -->
         
         <div class="container">
-            <p class="Titles">
+            <p class="Titles" id="section1">
                 Apps I use:
             </p>
             <div class="appContainer">
@@ -156,12 +156,31 @@
                 </div>
                 <h3>Davinci Resolve is a nice piece software that let's me edit videos, though requires a lot of GPU power.</h3>
             </div>
+            <div class="previews" data-target="VS">
+                <i class="fa-solid fa-xmark"></i>
+                <div class="apps">
+                    <div class="appGrouping"> 
+                        <img src="#">
+                        <caption>Test 1</caption>
+                    </div>
+                    <div class="appGrouping"> 
+                        <img src="#">
+                        <caption>Test 2</caption>
+                    </div>
+                    
+                    <div class="appGrouping"> 
+                        <img src="#">
+                        <caption>Test 3</caption>
+                    </div>
+                </div>
+                <h3>Placeholder.</h3>
+            </div>
         </div>
         
 
         <!-- Martial Arts -->
 
-        <div class="text">
+        <div class="text" id="section2">
 
             
             <p class="Titles">
@@ -176,6 +195,42 @@
             
         </div>
 
+        <!-- Games -->
+
+        <div class="text">
+
+            
+            <p class="Titles" id="section3">
+                Games that I play:
+            </p>
+            <p class="Information">
+                Should really specify that I don't a lot of games, but I tend to
+                play whatever is pretty at the moment. That being said, I have been
+                playing a particular mobile game for almost 10 years now. This 
+                being a popular Japanese game called <span>"Puzzles and Dragons"</span> aka PAD.
+
+            </p>
+            <div class="gameContainer">
+                <div class="gameCards">
+                    <img src='images/Pad.png' class="appIcon">
+                    <img src='images/op.png' class="appBack">
+                    <img src='images/back.png' class="appBack2"> 
+                    <div class="details">
+                        <p class="appName">PUZZLES AND DRAGONS</p>
+                        <p class="appDescription"> A Japanese Puzzle game for Smart Phones</p>
+                    </div>
+                    <div class="storeLogos">
+                        <img src="images/AppStore/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" class="stores">
+                        <img src="images/PlayStore/google-play-badge.png" class="stores">
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            
+        </div>
+        
 
         <script src="homeJS.js" async defer></script>
     </body>
