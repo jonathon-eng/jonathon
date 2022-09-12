@@ -17,17 +17,30 @@
 
         <!-- Navigation bar -->
 
-        <header>
-            <img class="logo" src="images/logo.svg" alt="logo">
+        <header class="primary">
+            <div>
+                <img class="logo" src="images/logo.svg" alt="logo">
+            </div>
+
+            
+            <button class="mobileNavToggle" aria-controls="Navbar" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+                <span class="sr-only">Menu</span>
+            </button>
+            
+            <!-- sr-only (Screen reader) is a special class, in this case it seems to make things disappear to people who can see, but is available to those who cannot see.  -->
+            
+            <div>
+                <a class="button_header" href="#"><button-header>Ask me!</button-header></a>
+            </div>
             <nav>
-                <ul class="Navbar">
+                <ul id="Navbar" data-visible="false" class="Navbar flex">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="#">Other Works</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a class="button_header" href="#"><button-header>Ask me!</button-header></a>
         </header>
 
         <!-- First Section -->
@@ -69,7 +82,7 @@
                         <li><a href="#section2">Martial Arts</a></li>
                         <li><a href="#">Guitar</a></li>
                         <li><a href="#section3">Gaming</a></li>
-                        <li><a href="#">Japanese</a></li>
+                        <li><a href="#section4">Japanese</a></li>
                         <li><a href="#section1">Photo/Video Editing</a></li>
     
                     </ul>
@@ -187,7 +200,7 @@
                 Martial Arts:
             </p>
             <p class="Information">
-                More specifically, I am a practitioner of Hung Ga <span>洪家拳</span> , which is a Southern Chinese Martial Art.
+                More specifically, I am a practitioner of Hung Ga <span class="hoverText" data-hover="Pronounced as HONE Ga queue(n)">洪家拳</span> , which is a Southern Chinese Martial Art.
                 I started practicing as a university student, when my Sifu was also just a student. Fast forward several 
                 years, and I haven't practiced as intently as I used to, I am still very ingrained in the skills and culture
                 behind it. 
@@ -220,8 +233,9 @@
                         <p class="appDescription"> A Japanese Puzzle game for Smart Phones</p>
                     </div>
                     <div class="storeLogos">
-                        <img src="images/AppStore/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" class="stores">
-                        <img src="images/PlayStore/google-play-badge.png" class="stores">
+                        <a href="https://apps.apple.com/jp/app/pazuru-doragonzu/id493470467?ign-mpt=uo%3D4"><img src="images/AppStore/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" class="stores"></a>
+                        <a href="https://play.google.com/store/apps/details?id=jp.gungho.pad"><img src="images/PlayStore/google-play-badge-2.png" class="stores"></a>
+                        <!-- <p>I am affiliated with Gungho or any of the entities related, I am simply just a fan.</p> -->
                     </div>
                     
                 </div>
@@ -229,6 +243,46 @@
             </div>
 
             
+        </div>
+
+        <div class="text">
+            <div class="subSection">
+                <p class="Titles" id="section4">
+                    Japanese:
+                </p>
+                <button id="flagButtonJP" onclick="Flag1()">🇯🇵</button>
+                <button id="flagButtonEN" onclick="Flag2()">🇺🇸</button>
+            </div>
+
+            <div id="EN">
+                <p class="Information">
+                    Kinda related to the previous topic, but when I first started 
+                    learning Japanese, playing Puzzles and Dragons helped me learn
+                    really specific Japanese terms and really helped improved my reading.
+                </p>
+
+                <p class="Information">
+                    That being said, my journey with learning Japanese a bit earlier than that.
+                    Originally, I started learning during a period of my life where I was stressed 
+                    out from learning about Biology and just needed a way out of the monotony. Soon after
+                    I found myself wanting to learn more and more.
+                </p>
+            </div>
+
+            <div id="JP">
+                <p class="Information-JP" >
+                    何年前、僕が日本語を勉強始めた時、パズドラで沢山単語と文法を学んだ。
+                    多分変ですけど、パズドラが一番強い道具と思います。
+                </p>
+
+                <p class="Information-JP">
+                    2013年は僕は大学生でした。あの時医者になるつもりだったから生物専門学部に入った。
+                    でも興味がなくなったから、毎日早く疲れた、何もしたくなった、ストレスが重なった。
+                    その後、日本の文化を発見しました。面白かったから、そろそろ勉強しました。すぐに日本語も
+                    勉強しました。完全違う言葉か文法が難しかったので経験が楽しかった。
+                </p>
+            </div>
+
         </div>
         
 

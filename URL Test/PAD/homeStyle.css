@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Bebas+Neue&family=Yuji+Syuku&display=swap');
 * {
     /* this is a global reset. */
     box-sizing: border-box;
@@ -33,31 +32,90 @@ span {
 
 li, a, button {
 
-    font-weight: 500;
-    font-size: 1.5rem;
+    font-weight: 900;
+    font-size: 1.3rem;
     text-decoration: none;
 
 }
 
-ul {
-    list-style: none;
-}
-
-header {
+/* header ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
+    list-style: none;
+    flex-shrink: inherit;
+} */
+
+.Information {
+    list-style: none;
+    text-decoration: none;
 }
 
+.primary {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
 
+}
+
+.mobileNavToggle {
+    display: none;
+}
+/* margin is shorthand for margin top, bottom, left and right
+inset is also a shorthand for JUST top, bottom, left and right */
+
+
+/* this is specifically so the navigation bar can show up properly on mobile */
+@media (max-width: 35em) {
+    .Navbar {
+        --gap: 3em;
+        z-index: 100;
+        position: fixed;
+        inset: 0 0 0 50%;
+        padding: min(20vh, 10rem) 2em;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        background: rgba(0, 2, 4, 0.8);
+        
+    }
+/* This is just in case the user is using a browser that supports a specific feature */
+
+@supports (backdrop-filter: blur(.5rem)) {
+    .Navbar {
+        background: rgba(1, 30, 56, 0.4);
+        backdrop-filter: blur(.5rem);
+    }
+}
+
+    .Navbar[data-visible='true'] {
+        transform: translateX(0%);
+    }
+
+    .mobileNavToggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: .35rem;
+        right: .35rem;
+    }
+
+}
+
+@media (min-width:35em) {
+    .Navbar {
+        padding-block: 1rem;
+        padding-inline: clamp(1rem, 2vw, 4rem);
+    }
+}
 .logo {
-    width: 70px;
+    margin-left: 10px;
+    width: 40px;
     cursor: pointer;
     transition: .3s ease 0s;
     background: transparent;
-    padding-bottom: 10px;
+
 }
 
 .logo:hover {
@@ -66,18 +124,31 @@ header {
     /* Must specify that the background to be transparent. */
 }
 
+
+
+
 .Navbar {
-    list-style: none;
+/* outline: #0088a9 solid 3px; */
+display: flex;
+
 
 }
+
+
+
+
+
 
 .Navbar li {
     display: inline-block;
     /* inline block makes it go left to right */
-    padding: 0px 40px;
+    padding: 0px 20px;
+    padding-bottom: 10px;
+    background: transparent;
 }
 
 .Navbar li a {
+    background: transparent;
     transition: all 0.3s ease 0s;
 }
 
@@ -85,14 +156,20 @@ header {
     color: #0088a9
 }
 
+
+
 button-header {
-    padding: 9px 25px;
+    padding: 10px ;
     background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    margin-left: auto;
+    font-size: 1rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    
 
 }
 
@@ -112,6 +189,12 @@ button {
 button-header:hover, button-header:focus::after {
     background-color: rgba(0, 136, 169, 0.8);
 }
+
+
+body {
+    overflow-x: hidden;
+}
+
 
 .text {
 background: #0088a9;
@@ -133,6 +216,7 @@ padding-bottom: 2px;
     color:#d5d5d5;
     font-size: 1.5rem;
     margin-left: 20px;
+    margin-right: 20px;
     padding-bottom: 30px;
     background: transparent;
 }
@@ -192,12 +276,14 @@ padding-bottom: 2px;
     border: 1px solid #bacdd8;
     border-radius: 20px;
     transition:  ease-out 2s;
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+    box-shadow: 5px 5px 4px #2f3437;
+
 }
 
 .appCards button {
-	color:rgb(176, 0, 185);
-
+    background: -webkit-linear-gradient(#d300df,#67006c,#77137c, #b000b9);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 	
 }
 
@@ -406,7 +492,7 @@ cursor: pointer;
 
 .gameCards:hover {
     border: none;
-  
+    cursor: default;
 	-webkit-animation: scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -564,6 +650,7 @@ top:2px; left:0px;
 
 .gameCards:hover .details {
     opacity: 0%;
+
  
 }
 
@@ -584,8 +671,12 @@ top:2px; left:0px;
     position: relative;
     font-size: 1.75rem;
     font-weight:bolder;
-    color: #C9489A;
+    /* color: #C9489A; */
+    background: -webkit-linear-gradient(#FCF182, #F9EF40, #FBF7B7,#FBB42A, #8D471F);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     align-items: center;
+    text-shadow: 10px;
     justify-content: center;
     font-family: 'Bebas Neue';
 }
@@ -610,14 +701,105 @@ top:2px; left:0px;
 
 
 
-.stores {
+.storeLogos {
     position: absolute;
     display: grid;
-    align-items: center;
-    justify-content: center;
-    width:  125px;
-    height: 41.5px;
-    object-fit: cover;
+bottom: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
 
+    object-fit: cover;
+background: transparent;
+border: 20px;
 }
 
+.storeLogos .stores{
+    display: none;
+    width:  125px;
+    height: 41.5px;
+}
+.storeLogos a{
+    background: transparent;
+}
+
+.gameCards:hover .stores {
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+}
+
+
+/* Japanese Section */
+
+.text .subSection {
+
+
+    /* outline: white 20px solid; */
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    flex-wrap: wrap;
+    /* outline: white solid 20px; */
+}
+
+.hoverText {
+    position: relative;
+  }
+  
+.hoverText::before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color:#0c3455;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    right: -25%
+  }
+  
+.hoverText:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+
+.subSection #flagButtonJP {
+    font-size: 3rem;
+    float: inline-end;
+}
+.subSection #flagButtonEN {
+    font-size: 3rem;
+    display: none;
+}
+
+.text .Information-JP {
+    color: #cbcbcb;
+    font-size: 1.5rem;
+    font-family: 'Yuji Syuku', serif;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: transparent;
+}
+
+#JP {
+    display: none;
+    padding-bottom: 100px;
+}
+
+#EN {
+    padding-bottom: 100px;
+}
+
+#flagButtonJP:hover, #flagButtonEN:hover {
+    filter:brightness(50%);
+}
